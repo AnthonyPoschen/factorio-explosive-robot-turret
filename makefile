@@ -10,7 +10,7 @@ endif
 build:
 	@rm zanven-drone-turret_* || true
 	@rm -r build || true
-	@mkdir -p build && mkdir -p ../$(FILENAME) && cp -r ./ ../$(FILENAME)/ && rm -rf ../$(FILENAME)/.git ../$(FILENAME)/makefile ../$(FILENAME)/build && mv ../$(FILENAME) ./build/$(FILENAME)
+	@mkdir -p build && rsync -a --exclude=.git/ --exclude=makefile --exclude=build/ --exclude=dev/ --exclude=*.zip . build/
 	@cd build && zip -r ../$(FILENAME).zip ./ && cd ../ && rm -rf build
 
 copy:
@@ -22,3 +22,6 @@ run: build copy
 
 wsl-setup:
 	apt get jq zip make
+
+make_drone-sprite:
+	montage ./dev/drone-render/*.png -tile 8x8 -geometry +0+0 -background none ./graphics/drone.png
