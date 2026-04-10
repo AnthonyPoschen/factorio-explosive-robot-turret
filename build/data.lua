@@ -1,6 +1,0 @@
-require("prototypes.entity.turret")
-require("prototypes.entity.drone")
-require("prototypes.recipe.ammo")
-require("prototypes.recipe.turret")
-require("prototypes.technology.tech")
-require("prototypes.item")

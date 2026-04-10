@@ -20,10 +20,11 @@ data:extend({
 	},
 	{
 		type = "ammo",
-		icon = "__space-age__/graphics/icons/rocket-turret.png",
+		icon = "__zanven-drone-turret__/graphics/drone-icon.png",
+		icon_size = 256,
 		name = "zanven-attack-drone",
 		ammo_category = "attack-drone",
-		icon_mipmaps = 4,
+		-- icon_mipmaps = 1,
 		subgroup = "ammo",
 		order = "d[explosive]-z[drone]",
 		stack_size = 1,
