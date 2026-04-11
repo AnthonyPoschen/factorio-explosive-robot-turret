@@ -26,3 +26,6 @@ wsl-setup:
 make_drone-sprite:
 	montage ./dev/drone-render/*.png -tile 8x8 -geometry +0+0 -background none ./graphics/drone.png
 	magick ./dev/drone-render/0027.png -resize 256x256 ./graphics/drone-icon.png
+make_turret-sprite:
+	montage ./dev/turret-render/*.png -tile 8x8 -geometry +0+0 -background none ./graphics/turret.png
+	magick './dev/turret top.png' -resize 256x256 ./graphics/turret-icon.png

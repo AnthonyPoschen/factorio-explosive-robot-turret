@@ -54,43 +54,56 @@ end
 function rocket_turret_attack(inputs)
 	return {
 		layers = {
-			util.sprite_load("__space-age__/graphics/entity/rocket-turret/rocket-turret-shooting", {
-				slice = 1,
+			{
+				filename = "__zanven-drone-turret__/graphics/turret.png",
+				width = 256,
+				height = 256,
+				frame_count = 1,
+				line_length = 8,
 				direction_count = 64,
-				shift = util.by_pixel(0.0, 0.0 + rocket_turret_shift),
-				scale = 0.5,
-			}),
-			util.sprite_load("__space-age__/graphics/entity/rocket-turret/rocket-turret-shooting-glow", {
-				slice = 1,
-				direction_count = 64,
-				shift = util.by_pixel(0.0, 0.0 + rocket_turret_shift),
-				scale = 0.5,
-				draw_as_light = true,
-				blend_mode = "additive",
-			}),
-			util.sprite_load("__space-age__/graphics/entity/rocket-turret/rocket-turret-shooting-mask", {
-				flags = { "mask" },
-				apply_runtime_tint = true,
-				slice = 1,
-				direction_count = 64,
-				shift = util.by_pixel(0.0, 0.0 + rocket_turret_shift),
-				scale = 0.5,
-			}),
-			util.sprite_load("__space-age__/graphics/entity/rocket-turret/rocket-turret-shooting-shadow", {
-				draw_as_shadow = true,
-				slice = 1,
-				direction_count = 64,
-				shift = util.by_pixel(0.0, 0.0 + rocket_turret_shift),
-				scale = 0.5,
-			}),
+				-- shift = util.by_pixel(0, 0 + rocket_turret_shift),
+				scale = 0.72,
+			},
 		},
+		-- layers = {
+		-- 	util.sprite_load("__space-age__/graphics/entity/rocket-turret/rocket-turret-shooting", {
+		-- 		slice = 1,
+		-- 		direction_count = 64,
+		-- 		shift = util.by_pixel(0.0, 0.0 + rocket_turret_shift),
+		-- 		scale = 0.5,
+		-- 	}),
+		-- 	util.sprite_load("__space-age__/graphics/entity/rocket-turret/rocket-turret-shooting-glow", {
+		-- 		slice = 1,
+		-- 		direction_count = 64,
+		-- 		shift = util.by_pixel(0.0, 0.0 + rocket_turret_shift),
+		-- 		scale = 0.5,
+		-- 		draw_as_light = true,
+		-- 		blend_mode = "additive",
+		-- 	}),
+		-- 	util.sprite_load("__space-age__/graphics/entity/rocket-turret/rocket-turret-shooting-mask", {
+		-- 		flags = { "mask" },
+		-- 		apply_runtime_tint = true,
+		-- 		slice = 1,
+		-- 		direction_count = 64,
+		-- 		shift = util.by_pixel(0.0, 0.0 + rocket_turret_shift),
+		-- 		scale = 0.5,
+		-- 	}),
+		-- 	util.sprite_load("__space-age__/graphics/entity/rocket-turret/rocket-turret-shooting-shadow", {
+		-- 		draw_as_shadow = true,
+		-- 		slice = 1,
+		-- 		direction_count = 64,
+		-- 		shift = util.by_pixel(0.0, 0.0 + rocket_turret_shift),
+		-- 		scale = 0.5,
+		-- 	}),
+		-- },
 	}
 end
 data:extend({
 	{
 		type = "ammo-turret",
 		name = "zanven-drone-turret",
-		icon = "__space-age__/graphics/icons/rocket-turret.png",
+		icon = "__zanven-drone-turret__/graphics/turret-icon.png",
+		icon_size = 256,
 		flags = { "placeable-player", "player-creation" },
 		minable = { mining_time = 0.5, result = "zanven-drone-turret" },
 		max_health = 400,
@@ -145,11 +158,11 @@ data:extend({
 		circuit_wire_max_distance = default_circuit_wire_max_distance,
 		open_sound = sounds.turret_open,
 		close_sound = sounds.turret_close,
-		folded_animation = rocket_turret_rising({}),
+		folded_animation = rocket_turret_attack({}),
 		preparing_animation = rocket_turret_rising({}),
 		prepared_animation = rocket_turret_attack({}),
 		attacking_animation = rocket_turret_attack({}),
-		folding_animation = rocket_turret_rising({ run_mode = "backward" }),
+		folding_animation = rocket_turret_attack({ run_mode = "backward" }),
 		graphics_set = {
 			base_visualisation = {
 				animation = {
@@ -181,7 +194,7 @@ data:extend({
 		attack_parameters = {
 			type = "projectile",
 			ammo_category = "attack-drone",
-			cooldown = 60,
+			cooldown = 240,
 			projectile_creation_distance = 1,
 			projectile_center = { 0, 0 },
 			min_range = 30,

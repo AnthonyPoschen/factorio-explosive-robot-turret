@@ -4,7 +4,8 @@ data:extend({
 	{
 		type = "item",
 		name = "zanven-drone-turret",
-		icon = "__space-age__/graphics/icons/rocket-turret.png",
+		icon = "__zanven-drone-turret__/graphics/turret-icon.png",
+		icon_size = 256,
 		subgroup = "turret",
 		order = "b[turret]-c[bot-turret]-a[turret]",
 		inventory_move_sound = item_sounds.turret_inventory_move,
