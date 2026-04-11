@@ -6,6 +6,7 @@ data:extend({
 		name = "zanven-drone-turret",
 		icon = "__zanven-drone-turret__/graphics/turret-icon.png",
 		icon_size = 256,
+		pictures = { { filename = "__zanven-drone-turret__/graphics/turret-icon.png", size = 256, scale = 0.20 } },
 		subgroup = "turret",
 		order = "b[turret]-c[bot-turret]-a[turret]",
 		inventory_move_sound = item_sounds.turret_inventory_move,
@@ -18,11 +19,14 @@ data:extend({
 	{
 		type = "ammo-category",
 		name = "attack-drone",
+		icon = "__zanven-drone-turret__/graphics/drone-icon.png",
+		icon_size = 256,
 	},
 	{
 		type = "ammo",
 		icon = "__zanven-drone-turret__/graphics/drone-icon.png",
 		icon_size = 256,
+		pictures = { { filename = "__zanven-drone-turret__/graphics/drone-icon.png", size = 256, scale = 0.20 } },
 		name = "zanven-attack-drone",
 		ammo_category = "attack-drone",
 		-- icon_mipmaps = 1,

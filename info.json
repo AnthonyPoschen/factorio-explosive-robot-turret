@@ -6,7 +6,7 @@
 	"author": "zanven",
 	"contact": "zanven42@gmail.com",
 	"homepage": "https://github.com/anthonyposchen/factorio-explosive-robot-turret",
-	"description": "Drone turret launches one way kamakazie bots for defence",
+	"description": "Drone turret launches one way long range attack drones for defence",
 	"dependencies": [
 		"base >= 2.0.0"
 	]

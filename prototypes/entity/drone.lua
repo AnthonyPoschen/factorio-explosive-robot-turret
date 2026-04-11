@@ -11,7 +11,7 @@ data:extend({
 
 		sound = {
 			filename = "__zanven-drone-turret__/sounds/drone-explossion.ogg",
-			volume = 1.0,
+			volume = 1.3,
 		},
 	},
 
@@ -30,7 +30,7 @@ data:extend({
 			width = 128,
 			height = 128,
 			shift = { 0, -0.5 },
-			scale = 0.5,
+			scale = 0.4,
 			priority = "high",
 		},
 		rotatable = true,

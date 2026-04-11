@@ -10,7 +10,7 @@ endif
 build:
 	@rm zanven-drone-turret_* || true
 	@rm -r build || true
-	@mkdir -p build && rsync -a --exclude=.git/ --exclude=makefile --exclude=build/ --exclude=dev/ --exclude=*.zip . build/
+	@mkdir -p build/$(FILENAME) && rsync -a --exclude=.git/ --exclude=makefile --exclude=build/ --exclude=dev/ --exclude=*.zip . build/$(FILENAME)
 	@cd build && zip -r ../$(FILENAME).zip ./ && cd ../ && rm -rf build
 
 copy:
