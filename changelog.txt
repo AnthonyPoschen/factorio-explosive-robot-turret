@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2026-04-11
+  Bugfixes:
+    - Thumbnail added
+		- Missing space-age dependency added
+	Notes:
+		- Currently using a couple base assets from space age it is possible to simply copy paste them
+			out to remove that requirement in future versions if required
+---------------------------------------------------------------------------------------------------
 Version: 0.0.1
 Date: 2026-04-11
   Features:

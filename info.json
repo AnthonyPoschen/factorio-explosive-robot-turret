@@ -1,6 +1,6 @@
 {
 	"name": "zanven-drone-turret",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"factorio_version": "2.0",
 	"title": "Drone turret",
 	"author": "zanven",
@@ -8,6 +8,7 @@
 	"homepage": "https://github.com/anthonyposchen/factorio-explosive-robot-turret",
 	"description": "Drone turret launches one way long range attack drones for defence",
 	"dependencies": [
-		"base >= 2.0.0"
+		"base >= 2.0.0",
+		"space-age >= 2.0.0"
 	]
 }
