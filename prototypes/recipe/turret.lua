@@ -3,6 +3,7 @@ data:extend({
 		type = "recipe",
 		name = "zanven-drone-turret",
 		enabled = false,
+		energy_required = 20,
 		ingredients = {
 			{ type = "item", name = "iron-gear-wheel", amount = 10 },
 			{ type = "item", name = "steel-plate", amount = 10 },

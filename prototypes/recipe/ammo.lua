@@ -3,6 +3,7 @@ data:extend({
 		type = "recipe",
 		name = "zanven-attack-drone",
 		enabled = false,
+		energy_required = 8,
 		ingredients = {
 			{ type = "item", name = "flying-robot-frame", amount = 1 },
 			{ type = "item", name = "battery", amount = 5 },
