@@ -28,4 +28,5 @@ make_drone-sprite:
 	magick ./dev/drone-render/0027.png -resize 256x256 ./graphics/drone-icon.png
 make_turret-sprite:
 	montage ./dev/turret-render/*.png -tile 8x8 -geometry +0+0 -background none ./graphics/turret.png
+	montage ./dev/turret-render-mask/*.png -tile 8x8 -geometry +0+0 -background none ./graphics/turret-mask.png
 	magick ./dev/turret-top.png -resize 256x256 ./graphics/turret-icon.png

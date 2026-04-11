@@ -64,6 +64,18 @@ function rocket_turret_attack(inputs)
 				-- shift = util.by_pixel(0, 0 + rocket_turret_shift),
 				scale = 0.72,
 			},
+			{
+				filename = "__zanven-drone-turret__/graphics/turret-mask.png",
+				flags = { "mask" },
+				apply_runtime_tint = true,
+				width = 256,
+				height = 256,
+				frame_count = 1,
+				line_length = 8,
+				direction_count = 64,
+				-- shift = util.by_pixel(0, 0 + rocket_turret_shift),
+				scale = 0.72,
+			},
 		},
 		-- layers = {
 		-- 	util.sprite_load("__space-age__/graphics/entity/rocket-turret/rocket-turret-shooting", {
@@ -159,7 +171,7 @@ data:extend({
 		open_sound = sounds.turret_open,
 		close_sound = sounds.turret_close,
 		folded_animation = rocket_turret_attack({}),
-		preparing_animation = rocket_turret_rising({}),
+		preparing_animation = rocket_turret_attack({}),
 		prepared_animation = rocket_turret_attack({}),
 		attacking_animation = rocket_turret_attack({}),
 		folding_animation = rocket_turret_attack({ run_mode = "backward" }),
@@ -208,15 +220,15 @@ data:extend({
 			-- 	),
 			-- 	aggregation = { max_count = 4, remove = true, count_already_playing = true },
 			-- },
-			projectile_creation_offsets = {
-				util.by_pixel(34, 25 - 32),
-				util.by_pixel(-34, 25 - 32),
-				util.by_pixel(31, 30 - 32),
-				util.by_pixel(-31, 30 - 32),
-				util.by_pixel(27, 35 - 32),
-				util.by_pixel(-27, 35 - 32),
-				-- 32 px is the rocket projectile height, so we need to subtract it from the y offset
-			},
+			-- projectile_creation_offsets = {
+			-- 	util.by_pixel(34, 25 - 32),
+			-- 	util.by_pixel(-34, 25 - 32),
+			-- 	util.by_pixel(31, 30 - 32),
+			-- 	util.by_pixel(-31, 30 - 32),
+			-- 	util.by_pixel(27, 35 - 32),
+			-- 	util.by_pixel(-27, 35 - 32),
+			-- 	-- 32 px is the rocket projectile height, so we need to subtract it from the y offset
+			-- },
 		},
 
 		call_for_help_radius = 20,
