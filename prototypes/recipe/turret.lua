@@ -10,6 +10,6 @@ data:extend({
 			{ type = "item", name = "advanced-circuit", amount = 20 },
 		},
 		results = { { type = "item", name = "zanven-drone-turret", amount = 1 } },
-		category = "crafting",
+		categories = { "crafting" },
 	},
 })

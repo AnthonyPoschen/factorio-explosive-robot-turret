@@ -1,14 +1,11 @@
 {
-	"name": "zanven-drone-turret",
-	"version": "0.0.3",
-	"factorio_version": "2.0",
-	"title": "Drone turret",
-	"author": "zanven",
-	"contact": "zanven42@gmail.com",
-	"homepage": "https://github.com/anthonyposchen/factorio-explosive-robot-turret",
-	"description": "Drone turret launches one way long range attack drones for defence",
-	"dependencies": [
-		"base >= 2.0.0",
-		"space-age >= 2.0.0"
-	]
+  "name": "zanven-drone-turret",
+  "version": "1.0.0",
+  "factorio_version": "2.1",
+  "title": "Drone turret",
+  "author": "zanven",
+  "contact": "zanven42@gmail.com",
+  "homepage": "https://github.com/anthonyposchen/factorio-explosive-robot-turret",
+  "description": "Drone turret launches one way long range attack drones for defence",
+  "dependencies": ["base >= 2.1.0", "space-age >= 2.1.0"]
 }

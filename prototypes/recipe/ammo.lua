@@ -11,6 +11,6 @@ data:extend({
 			{ type = "item", name = "radar", amount = 1 },
 		},
 		results = { { type = "item", name = "zanven-attack-drone", amount = 1 } },
-		category = "crafting", -- or "crafting"
+		categories = { "crafting" },
 	},
 })
